@@ -1,0 +1,25 @@
+public class Main
+{
+  public static void main (String[]args)
+  {
+
+    String num = "9876543219876543219876";
+    // you can also use BIGINTEGER in place of string
+    // if you have to store a number like this
+      System.out.println ("Sum of digits : " + getSum (num));
+  }
+
+  static int getSum (String num)
+  {
+    int sum = 0;
+
+    // Traverse through the whole string(char array)
+    for (int i = 0; i < num.length (); i++)
+      {
+	// Ascii value pf numbers start from 48
+	// subtracting 48 will give us value in int
+	sum = sum + num.charAt (i) - 48;
+      }
+    return sum;
+  }
+}
